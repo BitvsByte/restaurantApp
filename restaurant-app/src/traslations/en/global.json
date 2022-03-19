@@ -1,9 +1,15 @@
 {
     "header":{
-        "hello-world":"Hello World"
+        "hello-world":"Hello World",
+        "switch":"Night Mode",
+        "boton":"signUp",
+        "boton1":"SignIn"
     },
     "main":{
         "lore":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus accusantium ipsam debitis, quas quia consectetur dolorum pariatur ullam voluptate tempore delectus facilis? Cupiditate, doloribus hic deserunt ipsam corrupti nesciunt nam"
+    },
+    "footer":{
+        "hello-world":"Hello World"
     }
 
 }

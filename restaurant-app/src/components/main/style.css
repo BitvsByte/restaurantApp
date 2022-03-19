@@ -1,5 +1,13 @@
 .test2{
-    width:1000px;
-    height: 200px;
-    background-color: blue;
+    
+   
+    background-color:black;
+    color:white;
+    background-image: url('../../assets//img/fondo2.jpg');
+    background-position:inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    height: 100%;
+    
 }

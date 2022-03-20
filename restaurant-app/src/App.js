@@ -10,6 +10,7 @@ import Login from './pages/2-log';
 import Register from './pages/3-reg';
 import Bookings from './pages/4-reservas';
 import Commands from './pages/5-pedido';
+import Validate from './pages/validate';
 
 
 
@@ -24,8 +25,9 @@ function App() {
         <Routes>
           
           <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/validate" element={<Validate></Validate>}></Route>
           <Route path="/login" element={<Login />}></Route>
-          <Route path="/registro" element={<Register />}></Route>
+          
           <Route path="/reservas" element={<Bookings />}></Route>
           <Route path="/pedido" element={<Commands />}></Route>
           <Route path="/pago" element={<Login />}></Route>

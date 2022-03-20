@@ -3,10 +3,30 @@
         "hello-world":"Hola Mundo",
         "switch":"Modo Noche",
         "boton":"Reg",
-        "boton1":"Log"
+        "boton1":"Log",
+        "username":"Nombre de Usuario",
+        "password":"Contraseña",
+        "enter":"Acceder",
+        "name":"Nombre",
+        "nameplace":"Escriba su Nombre",
+        "lastname":"Apellidos",
+        "lastnameplace":"Escriba sus Apellidos",
+        "mail":"Correo Electronico",
+        "mailplace":"Escriba su direccion de correo electronico",
+        "usernameplace":"Escriba su nombre de Usuario",
+        "passwordplace":"Escriba su Contraseña",
+        "send":"Enviar",
+        "registro":"Bienvenido a su pagina de Registro",
+        "comprobar":"Por favor comprueba tu correo electrónico y valídate antes de continuar",
+        "cerrar":"Cerrar"
     },
     "main":{
-        "lore":"Casa Nacida de los que la acusaban de deudas, que, siendo ella fácilmente elegida en el tiempo de las penas, ¿podría algún placer ser fruto del mayor placer? El afán, las penas aquí la abandonan cuando se corrompen porque no saben"
+        "reservar":"Reserve su mesa de una forma sencilla y rapida, desde su casa o dispositivo móvil, sin colas ni esperas",
+        "command":"Usted puede realizar su pedido desde nuestra nueva app, una vez se encuentre en nuestro establecimiento, se desplegara la opcion de realizar el pedido, nuestro servicio de mesa acudira cuando uested tenga alguna duda",
+        "pay":"Puede realizar su pago de forma segura y rápida con nuestro servicio de pago, una vez realizado el pedido puede pagar cómodamente.",
+        "reservas":"Reservas",
+        "menu":"Menu",
+        "payments":"Formas de Pago exclusivas"
     },
     "footer":{
         "hello-world":"Hello World"

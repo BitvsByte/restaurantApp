@@ -4,7 +4,7 @@ export const lightTheme = {
         color: 'primary',
     },
     secondary: {
-        color: '#273446'
+        color: 'secondary'
     },
     typography: {
         color: 'info'
@@ -16,7 +16,7 @@ export const darkTheme = {
         color: 'primary',
     },
     secondary: {
-        color: 'green   '
+        color: 'success'
     },
     typography: {
         color: 'success'

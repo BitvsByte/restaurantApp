@@ -3,7 +3,7 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
-import "./style.css";
+
 import { Col } from "react-bootstrap";
 import ThemingSelector from "../themimg-selector";
 import { ThemingContext } from "../themimg-selector/theming.context";
@@ -18,7 +18,7 @@ import ModalLog from "../modalLogin";
 
 
 
-function Headerapp() {
+function Headerappdos() {
   const [t, i18n] = useTranslation("global");
 
   const [theming, changecolor] = useContext(ThemingContext);
@@ -34,10 +34,8 @@ function Headerapp() {
           <Navbar.Collapse className="d-flex justify-content-end">
             <Navbar.Text>
 
-              <Form.Check onClick={changecolor} type="switch" id="custom-switch" label={t("header.switch")}  className="text-success"  />
-              <ModalReg></ModalReg>
-              <ModalLog></ModalLog>
-              <Headertra />
+
+      
             </Navbar.Text>
           </Navbar.Collapse>
         
@@ -46,4 +44,4 @@ function Headerapp() {
   );
 }
 
-export default Headerapp;
+export default Headerappdos;

@@ -1,9 +1,15 @@
 import './style.css';
 import React from 'react';
 import ThemingSelector from '../themimg-selector';
+import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import { ThemingContext } from "../themimg-selector/theming.context";
 
 
 function Footer() {
+  const [t, i18n] = useTranslation("global");
+
+  const [theming, changecolor] = useContext(ThemingContext);
   return (
     <React.Fragment>
       <div className="d-flex flex-column h-70 mt-auto">

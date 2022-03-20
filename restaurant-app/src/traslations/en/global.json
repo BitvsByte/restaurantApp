@@ -3,10 +3,32 @@
         "hello-world":"Hello World",
         "switch":"Night Mode",
         "boton":"signUp",
-        "boton1":"SignIn"
+        "boton1":"SignIn",
+        "username":"User Name",
+        "password":"Password",
+        "enter":"Enter",
+        "name":"Name",
+        "nameplace":"Enter your name",
+        "lastname":"Last Name",
+        "lastnameplace":"Enter your Last Name",
+        "email":"Email",
+        "mailplace":"Enter your email address",
+        "usernameplace":"Enter your User Name",
+        "passwordplace":"Enter your Password",
+        "send":"Send",
+        "registro":"Welcome to your registration page",
+        "comprobar":"Please check your email and validate before proceeding",
+        "cerrar":"Close"
+
+        
     },
     "main":{
-        "lore":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus accusantium ipsam debitis, quas quia consectetur dolorum pariatur ullam voluptate tempore delectus facilis? Cupiditate, doloribus hic deserunt ipsam corrupti nesciunt nam"
+        "reservar":"Reserve your table in a simple and fast way, from your home or mobile device, without queues or waiting",
+        "command":"You can place your order from our new app, once you are in our establishment, the option to place the order will be displayed, our table service will come when you have any questions.",
+        "pay":"You can place your order from our new app, once you are in our establishment, the option to place the order will be displayed, our table service will come when you have any questions.",
+        "reservas":"Booking",
+        "menu":"Menu",
+        "payments":"Payments"
     },
     "footer":{
         "hello-world":"Hello World"

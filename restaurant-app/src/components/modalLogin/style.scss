@@ -1,0 +1,43 @@
+#modal_container{
+    border-radius: 20px;
+    background-color:transparent;
+}
+.zoom:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.header_color{
+    background-color:cornflowerblue;
+    
+}
+.body_container{
+    background-color: gray;
+}
+.input_btn {
+    color: grey;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      67deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(101, 101, 103, 1) 26%,
+      rgba(248, 253, 254, 1) 100%
+    );
+    border: none;
+    border-bottom: 2px solid black;
+    box-shadow: 39px 24px 29px -4px rgba(0, 0, 0, 0.63);
+}
+.card_container {
+    border-bottom: 2px solid black;
+    box-shadow: 39px 24px 29px -4px rgba(0, 0, 0, 0.63);
+    margin-top: 20px;
+    // padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      286deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(101, 101, 103, 1) 26%,
+      rgba(248, 253, 254, 1) 100%
+    );
+}

@@ -1,0 +1,83 @@
+// .titles{
+// 	padding-top: 100px;
+// }
+
+.contenedor_padre {
+  background-image: url("../../assets/img/elegancia.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// .contenedor {
+// 	// width: 90%;
+// 	// max-width: 1000px;
+// 	margin: 50px auto;
+// 	text-align: center;
+// 	background: #fff;
+// // 	-webkit-box-shadow: 5px 5px 15px 5px #FCFFFF;
+// // box-shadow: 5px 5px 15px 5px #FCFFFF;
+// 	padding: 40px;
+// 	border-radius: 5px;
+// 	display: flex;
+
+// 	display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     /* align-content: stretch; */
+//     justify-content: center;
+// 	border: 1px solid black;
+// 	width: 450px;
+//     height: 600px;
+//     border-radius: 8px;
+//     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+//     overflow: hidden;
+//     text-align: center;
+//     transition: all;
+//     margin-bottom: 0px;
+//     margin-top:0px;
+// }
+
+// #label {
+// 	width: 100%;
+// 	font-size: 14px;
+// 	color:red;
+// }
+
+// .input {
+// 	text-align: center;
+// 	padding: 20px;
+// 	font-size: 18px;
+// 	text-transform: uppercase;
+// }
+
+// .input::before {
+// 	border-bottom: none !important;
+// }
+.input_btn {
+  color: grey;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    67deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(101, 101, 103, 1) 26%,
+    rgba(248, 253, 254, 1) 100%
+  );
+  border: none;
+  border-bottom: 2px solid black;
+  box-shadow: 39px 24px 29px -4px rgba(0, 0, 0, 0.63);
+}
+.card_container {
+  border-bottom: 2px solid black;
+  box-shadow: 39px 24px 29px -4px rgba(0, 0, 0, 0.63);
+  margin-top: 20px;
+  // padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    286deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(101, 101, 103, 1) 26%,
+    rgba(248, 253, 254, 1) 100%
+  );
+}

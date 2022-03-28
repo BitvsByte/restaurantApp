@@ -7,90 +7,96 @@ import Form from 'react-bootstrap/Form'
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
+import {GiArchiveRegister} from 'react-icons/gi'
+import './style.scss'
+import {useContext} from 'react'
+import {ThemingContext} from "./../themimg-selector/theming.context";
+import { useNavigate } from 'react-router-dom';
+
 
 
 function ModalReg() {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [show, setShow] = useState(false);
+  const [theming] = useContext(ThemingContext);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const [users, usersUpdate] = useState([])
+  const navigate = useNavigate()
+  
 
-  const handleSubmit = e => {
-      e.preventDefault()
-      const userData = {
-          name: e.target.name.value,
-          lastname: e.target.lastname.value,
-          username: e.target.username.value,
-          email: e.target.email.value,
-          password: e.target.password.value,
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const userData = {
+      name: e.target.name.value,
+      lastname: e.target.lastname.value,
+      username: e.target.username.value,
+      email: e.target.email.value,
+      password: e.target.password.value,
+    };
 
-      }
+    usersUpdate(userData);
 
-      usersUpdate(userData)
+    fetch("http://localhost:4000/auth/register", {
+      method: "POST",
+      body: JSON.stringify(userData),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((d) => d.json())
+      .then((data) => {
+        usersUpdate(...users, userData);
+        console.log(data);
+      });
 
-      fetch('http://localhost:4000/auth/register', {
-          method: 'POST',
-          body: JSON.stringify(userData),
-          headers: { 'Content-Type': 'application/json' }
-      })
-
-          .then(d => d.json())
-          .then((data) => {
-              usersUpdate(...users, userData)
-              console.log(data)
-          })
-
-  }
+   
+   navigate("/");
+  };
 
   return (
     <React.Fragment>
-      <Button variant="secondary" style={{width:"70px"}} onClick={handleShow}>
+      <Button  variant={`${theming.secondary.color}`} className={`text-${theming.typography.color}`} style={{width:"70px"}} onClick={handleShow}>
         {t("header.boton")}
       </Button>
 
 
-      <Modal show={show} onHide={handleClose} animation={true}>
+      <Modal show={show} onHide={handleClose} animation={true} className="modal_container">
 
-        <Modal.Header closeButton>
+        <Modal.Header closeButton className="header_color">
         <Modal.Title>{t("header.registro")}</Modal.Title>
         </Modal.Header>
-        <Container >
-        <Form onSubmit={handleSubmit} noValidate  style={{width:"400px",height:"500px"}} >
+        <Modal.Body className="hola" >
+        <Form onSubmit={handleSubmit} Validate  style={{width:"400px",height:"500px"}} autocomplete="off" >
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>{t("header.name")}</Form.Label>
-              <Form.Control className="bg-success shadow rounded"  style={{width:"300px"}} type="text" name="name" placeholder={t("header.nameplace")} />
+              <Form.Label className={`text-${theming.typography.color}`}>{t("header.name")}</Form.Label>
+              <Form.Control className="bg-secondary  shadow rounded zoom"  style={{width:"400px"}} type="text" name="name" placeholder={t("header.nameplace")} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>{t("header.lastname")}</Form.Label>
-              <Form.Control className="bg-success shadow rounded" style={{width:"300px"}} type="text" name="lastname" placeholder={t("header.lastnameplace")} />
+              <Form.Label className={`text-${theming.typography.color}`}>{t("header.lastname")}</Form.Label>
+              <Form.Control className="bg-secondary  shadow rounded zoom" style={{width:"400px"}} type="text" name="lastname" placeholder={t("header.lastnameplace")} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>{t("header.username")}</Form.Label>
-              <Form.Control className="bg-success shadow rounded" style={{width:"300px"}} type="text" name="username" placeholder={t("header.usernameplace")} />
+              <Form.Label className={`text-${theming.typography.color}`}>{t("header.username")}</Form.Label>
+              <Form.Control className="bg-secondary  shadow rounded zoom" style={{width:"400px"}} type="text" name="username" placeholder={t("header.usernameplace")} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>{t("header.email")}</Form.Label>
-              <Form.Control className="bg-success shadow rounded" style={{width:"300px"}} type="mail" name="email" placeholder={t("header.mailplace")} />
+              <Form.Label className={`text-${theming.typography.color}`}>{t("header.email")}</Form.Label>
+              <Form.Control className="bg-secondary shadow rounded zoom" style={{width:"400px"}} type="mail" name="email" placeholder={t("header.mailplace")} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>{t("header.password")}</Form.Label>
-              <Form.Control className="bg-success shadow rounded"  style={{width:"300px"}} type="password" name="password" placeholder={t("header.passwordplace")} />
+              <Form.Label className={`text-${theming.typography.color}`}>{t("header.password")}</Form.Label>
+              <Form.Control className="bg-secondary shadow rounded zoom"  style={{width:"400px"}} type="password" name="password" placeholder={t("header.passwordplace")} />
             </Form.Group>
-            <Button variant="success" type="submit">{t("header.send")}</Button>
+            <Button variant="secondary" type="submit">{t("header.send")}</Button>
           </Form>
-          <Modal.Title>{t("header.comprobar")}</Modal.Title>
+          
           <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-          {t("header.cerrar")}
-          </Button>
-         
+          <Modal.Title className="text-small">{t("header.comprobar")}</Modal.Title>
         </Modal.Footer>
             
 
-        </Container>
+        </Modal.Body>
   
 
 

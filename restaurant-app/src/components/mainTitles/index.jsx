@@ -7,14 +7,14 @@ import mesa from '../../assets/img/mesa.jpg'
 import pagos from '../../assets/img/pagos.jpg'
 import pedido from '../../assets/img/pedido.jpg'
 import { Container } from "react-bootstrap";
-import './style.css';
+import './style.scss';
 
 
 
 
 function MainTitles() {
   const [t, i18n] = useTranslation("global");
-  const [theming, changecolor] = useContext(ThemingContext);
+  const [theming] = useContext(ThemingContext);
 
   return (
     <React.Fragment>
@@ -27,18 +27,18 @@ function MainTitles() {
             {/* <!-- PRIMERA CARTA--> */}
             <div className="flip_card_inner_b">
               {/* <!-- FRONT  --> */}
-              <div className="type-a_card" id="mountain-front_card">
-                <div id="mountain" className="text-inside-img_card">
+              <div className="type-a_card" id="booking-front_card">
+                <div id="booking" className={`text-inside-img_card text-${theming.typography.color}`}>
                   {t("main.reservas")}
                 </div>
               </div>
 
               {/* <!-- BACK--> */}
               <div className="type-b_card">
-                <div className="back_title_inside_card">
+                <div className={`back_title_inside_card  text-${theming.typography.color}`}>
                   {t("main.reservas")}
                 </div>
-                <div className="back_text_inside_card">
+                <div className={`back_text_inside_card text-${theming.typography.color}`}>
                   {t("main.reservar")}
                 </div>
               </div>
@@ -48,34 +48,34 @@ function MainTitles() {
 
             <div className="flip_card_inner_a">
               {/* <!-- FRONT--> */}
-              <div className="type-a_card" id="lake-front_card">
-                <div id="lake" className="text-inside-img_card">
+              <div className={`type-a_card text-${theming.typography.color}`} id="command-front_card">
+                <div id="command" className={`text-inside-img_card  text-${theming.typography.color}`}>
                   {t("main.menu")}
                 </div>
               </div>
 
               {/* <!-- BACK --> */}
               <div className="type-c_card">
-                <div className="back_title_inside_card">{t("main.menu")}</div>
-                <div className="back_text_inside_card">{t("main.command")}</div>
+                <div className={`back_title_inside_card text-${theming.typography.color}`}>{t("main.menu")}</div>
+                <div className={`back_text_inside_card text-${theming.typography.color}`}>{t("main.command")}</div>
               </div>
             </div>
 
             {/* <!-- TERCERA CARTA --> */}
             <div className="flip_card_inner_b">
               {/* <!-- FRONT--> */}
-              <div className="type-a_card" id="ocean-front_card">
-                <div id="ocean" className="text-inside-img_card">
+              <div className="type-a_card" id="pay-front_card">
+                <div id="pay" className={`text-inside-img_card text-${theming.typography.color}`}>
                   {t("main.payments")}
                 </div>
               </div>
 
               {/* <!-- BACK --> */}
               <div className="type-b_card">
-                <div className="back_title_inside_card">
+                <div className={`back_title_inside_card text-${theming.typography.color} `}>
                   {t("main.payments")}
                 </div>
-                <div className="back_text_inside_card">{t("main.pay")}</div>
+                <div className={`back_text_inside_card text-${theming.typography.color} `}>{t("main.pay")}</div>
               </div>
             </div>
           </div>

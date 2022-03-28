@@ -1,6 +1,6 @@
 import React from "react";
 import Validator from "../../components/validator";
-import Headerappdos from "../../components/headerapp2";
+import Headerappdos from "../../components/headerVal";
 import Footer from "../../components/footer";
 
 
@@ -11,7 +11,7 @@ function Validate() {
         <React.Fragment>
             <Headerappdos></Headerappdos>
             <Validator></Validator>
-            {/* <Footer></Footer> */}
+           
         </React.Fragment>
     )
 }

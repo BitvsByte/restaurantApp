@@ -4,10 +4,13 @@ export const lightTheme = {
         color: 'primary',
     },
     secondary: {
-        color: 'secondary'
+        color: 'primary'
     },
     typography: {
         color: 'info'
+    },
+    reservas:{
+        color:'danger'
     }
 }
 
@@ -19,7 +22,10 @@ export const darkTheme = {
         color: 'success'
     },
     typography: {
-        color: 'success'
+        color: 'warning'
+    },
+    reservas:{
+        color:'warning'
     }
 }
 

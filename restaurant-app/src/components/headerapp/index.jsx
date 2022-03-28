@@ -3,7 +3,7 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
-import "./style.css";
+import "./style.scss";
 import { Col } from "react-bootstrap";
 import ThemingSelector from "../themimg-selector";
 import { ThemingContext } from "../themimg-selector/theming.context";
@@ -13,6 +13,13 @@ import { useTranslation } from "react-i18next";
 import logo2 from './../../assets/img/logo2.jpeg'
 import ModalReg from "../modalRegister";
 import ModalLog from "../modalLogin";
+import {FaRegUserCircle} from 'react-icons/fa'
+import { Link } from "react-router-dom";
+import { Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
+
+
 
 
 
@@ -22,25 +29,56 @@ function Headerapp() {
   const [t, i18n] = useTranslation("global");
 
   const [theming, changecolor] = useContext(ThemingContext);
+  const navigate = useNavigate();
+  const handleDelete = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
 
 
   return (
     <React.Fragment>
-
       <Navbar bg={theming.primary.color} variant="dark">
-        
-          <Navbar.Brand><img alt="" src={logo2} width="250" height="80" /></Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="d-flex justify-content-end">
-            <Navbar.Text>
+        <Navbar.Brand>
+          <img alt="" src={logo2} width="250" height="80" />
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="d-flex justify-content-end">
+<Row>
+  <Col>
+  <Container>
+            <Form.Check
+              onClick={changecolor}
+              type="switch"
+              id="custom-switch"
+              label={t("header.switch")}
+              className="text-success"
+            />   
+          </Container>
+          <Container>
+          <ModalReg />
+          <ModalLog /> 
+          <Button variant="success" type="submit" onClick={handleDelete}></Button>
 
-              <Form.Check onClick={changecolor} type="switch" id="custom-switch" label={t("header.switch")}  className="text-success"  />
-              <ModalReg></ModalReg>
-              <ModalLog></ModalLog>
-              <Headertra />
-            </Navbar.Text>
-          </Navbar.Collapse>
-        
+          </Container>
+          <Container>
+          <Headertra />
+          
+
+          </Container>
+
+
+  </Col>
+</Row>
+
+
+          
+
+
+          
+
+          
+        </Navbar.Collapse>
       </Navbar>
     </React.Fragment>
   );

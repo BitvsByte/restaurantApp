@@ -18,7 +18,10 @@
         "send":"Enviar",
         "registro":"Bienvenido a su pagina de Registro",
         "comprobar":"Por favor comprueba tu correo electrónico y valídate antes de continuar",
-        "cerrar":"Cerrar"
+        "cerrar":"Cerrar",
+        "log":"Debe estar Logueado para continuar",
+        "succesfull":"Enjoy your stay with us, we are pleased to help you."
+
     },
     "main":{
         "reservar":"Reserve su mesa de una forma sencilla y rapida, desde su casa o dispositivo móvil, sin colas ni esperas",
@@ -26,9 +29,24 @@
         "pay":"Puede realizar su pago de forma segura y rápida con nuestro servicio de pago, una vez realizado el pedido puede pagar cómodamente.",
         "reservas":"Reservas",
         "menu":"Menu",
-        "payments":"Formas de Pago exclusivas"
+        "payments":"Formas de Pago exclusivas",
+        "date":"Fecha",
+        "reservation":"Hora de Reserva",
+        "First":"Nombre y Apellidos",
+        "numberof":"Numero de comensales",
+        "placeenter":"Escriba su Nombre y Apellidos",
+        "titlesbooking":"Realice su reserva, le informamos que recibirá un correo electrónico confirmado su reserva",
+        "starter":"Entrantes",
+        "maindish":"Platos Principales",
+        "secondcourse":"Segundos Platos",
+        "wine":"Vino"
     },
     "footer":{
-        "hello-world":"Hello World"
+        "hello-world":"Hello World",
+        "footer-title":"Proyecto Restaurante_app",
+        "footer-subtitules":"Proyecto realizado durante el transcurso académico en el  bootcamp de Neoland 2022",
+        "alumnos":"Alumnos",
+        "cong":"Agradecimientos especiales",
+        "congdos":"Me gustaría agradecer todo el esfuerzo realizado por parte tanto de Alejando González y Jose Tovar, excelentes profesores además agradecer a todos mis compañeros la paciencia y ayuda, en algunos casos bastante especial."
     }
 }

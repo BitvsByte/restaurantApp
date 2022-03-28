@@ -1,5 +1,5 @@
 import React from "react";
-import './style.css';
+import './style.scss';
 import { useTranslation } from "react-i18next";
 import Carru from "../carrusel";
 import MainTitles from "../mainTitles";

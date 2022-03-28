@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import NotFoundPage from './pages/7-NotFoundPage';
 
 // import Headerapp from './components/headerapp';
@@ -6,11 +6,15 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './pages/1-landing';
 import ThemingProvider from './components/themimg-selector/theming.provider';
-import Login from './pages/2-log';
-import Register from './pages/3-reg';
-import Bookings from './pages/4-reservas';
-import Commands from './pages/5-pedido';
-import Validate from './pages/validate';
+import Footer from './components/footer';
+
+
+import Bookings from './pages/4-bookingPage';
+import Commands from './pages/5-command';
+import Validate from './pages/2-validate';
+import Payment from './pages/6-pago';
+import ProtectedRoute from './components/rutas/rutaprivada.perfil';
+import Perfil from './pages/3-userProfile';
 
 
 
@@ -18,6 +22,9 @@ import Validate from './pages/validate';
 
 
 function App() {
+
+
+
   return (
     <React.Fragment>
       <ThemingProvider>
@@ -26,14 +33,19 @@ function App() {
           
           <Route path="/" element={<LandingPage />}></Route>
           <Route path="/validate" element={<Validate></Validate>}></Route>
-          <Route path="/login" element={<Login />}></Route>
           
-          <Route path="/reservas" element={<Bookings />}></Route>
-          <Route path="/pedido" element={<Commands />}></Route>
-          <Route path="/pago" element={<Login />}></Route>
+         
+          <Route path="/reservas" element={<ProtectedRoute><Bookings /></ProtectedRoute>}></Route>
+          <Route path="/perfil" element={<ProtectedRoute><Perfil></Perfil></ProtectedRoute>}></Route>
+        
+          
+          <Route path="/pedido" element={<ProtectedRoute><Commands /></ProtectedRoute>}></Route>
+          <Route path="/pago" element={<ProtectedRoute><Payment /></ProtectedRoute>}></Route>
           <Route path="/*" element={<NotFoundPage />}></Route>
         </Routes>
+      
       </BrowserRouter>
+    {/* <Footer />   */}
 
 
       </ThemingProvider>

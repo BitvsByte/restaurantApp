@@ -1,0 +1,38 @@
+.card_containe:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(238, 235, 235, 0.2);
+
+  
+}
+.card_containe{
+  background-color: white;
+}
+
+.command_conatiner{
+  background-image: url('../../assets/img/tamara-schipchinskaya-NgLO-4P2uok-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+
+}
+.titles__command {
+  font-size: 14px;
+  padding-top: 0;
+}
+.price__command {
+  font-size: 14px;
+  font: bolder;
+}
+
+.zoom {
+  transition: transform 0.2s;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
+.card_body{
+  padding-top: 3px;
+  
+
+}

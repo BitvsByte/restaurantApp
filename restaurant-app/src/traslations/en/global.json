@@ -18,7 +18,9 @@
         "send":"Send",
         "registro":"Welcome to your registration page",
         "comprobar":"Please check your email and validate before proceeding",
-        "cerrar":"Close"
+        "cerrar":"Close",
+        "log":"You must be logged in to continue",
+        "succesfull":"Enjoy your stay with us, we are pleased to help you."
 
         
     },
@@ -28,10 +30,32 @@
         "pay":"You can place your order from our new app, once you are in our establishment, the option to place the order will be displayed, our table service will come when you have any questions.",
         "reservas":"Booking",
         "menu":"Menu",
-        "payments":"Payments"
+        "payments":"Payments",
+        "date":"Date",
+        "reservation":"Reservation",
+        "First":"First and Last Name",
+        "numberof":"Number of diners",
+        "placeenter":"Enter your first and last name",
+        "titlesbooking":"Make your booking, we inform that you'll receive an booking e-mail confirming.",
+        "starter":"Starters",
+        "maindish":"Main Course",
+        "secondcourse":"Second Course",
+        "wine":"Wine"
+
+
+
+
+
+
     },
     "footer":{
-        "hello-world":"Hello World"
+        "hello-world":"Hello World",
+        "footer-title":"Project Restaurant_app",
+        "footer-subtitules":"Project realised during the academic course at the Neoland 2022 bootcamp.",
+        "alumnos":"Students",
+        "cong":"Special thanks",
+        "congdos":"I would like to thank all the effort made by both Alejando Gonzalez and Jose Tovar, excellent teachers. I would also like to thank all my classmates for their patience and help, in some cases quite special."
+
     }
 
 }

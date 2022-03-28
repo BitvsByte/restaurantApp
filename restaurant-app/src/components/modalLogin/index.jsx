@@ -7,78 +7,113 @@ import Form from 'react-bootstrap/Form'
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
+import {useContext} from 'react'
+import {ThemingContext} from "./../themimg-selector/theming.context";
+import { useNavigate } from 'react-router-dom';
+import './style.scss'
+import {BiLogIn} from 'react-icons/bi'
 
 
 function ModalLog() {
   const [t, i18n] = useTranslation("global");
+  const [theming, updateTheming, logName, setLogName] = useContext(ThemingContext);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [users, usersUpdate] = useState([])
+  // const [users, usersUpdate] = useState([]);
+  const navigate = useNavigate()
 
-  const handleSubmit = e => {
-      e.preventDefault()
-      const userData = {
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    const user = {
+      email: e.target.email.value,
+      password: e.target.password.value,
+    };
+    // console.log(user)
 
-          username: e.target.username.value,
-          email: e.target.email.value,
-          
+    fetch("http://localhost:4000/auth/login", {
+      method: "POST",
+      body: JSON.stringify(user),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((d) => d.json())
+      .then((data) => {
+        fetch("http://localhost:4000/users", {
+          method: "GET",
+          headers: { Authorization: `Bearer ${data.access_token}` },
+        })
+          .then((r) => r.json())
+          .then((info) => {
+            setLogName(info);
+            console.log(info);
+            localStorage.setItem("token", data.access_token);
 
-      }
+            navigate("/reservas");
+          });
+        console.log(data.access_token);
+      });
 
-      usersUpdate(userData)
+      
+    
 
-      fetch('http://localhost:4000/auth/register', {
-          method: 'POST',
-          body: JSON.stringify(userData),
-          headers: { 'Content-Type': 'application/json' }
-      })
 
-          .then(d => d.json())
-          .then((data) => {
-              usersUpdate(...users, userData)
-              console.log(data)
-          })
-
-  }
+    // 
+  };
 
   return (
     <React.Fragment>
-      <Button variant="secondary" style={{width:"70px"}} onClick={handleShow}>
+      <Button
+      className={`text-${theming.typography.color}`}
+      variant={`${theming.secondary.color}`}
+         
+        style={{ width: "70px" }}
+        onClick={handleShow}
+      >
         {t("header.boton1")}
       </Button>
 
-
-      <Modal show={show} onHide={handleClose} animation={true}>
-        <Modal.Header closeButton></Modal.Header>
-        <Container >
-        <Form onSubmit={handleSubmit} noValidate  style={{width:"400px",height:"600px"}} >
-
-
+      <Modal show={show} onHide={handleClose} animation={true} className="modal_container">
+        <Modal.Header className="header_color"><Modal.Title>{t("header.log")}</Modal.Title></Modal.Header>
+        <Modal.Body className="body_container">
+          <Form
+            onSubmit={handleOnSubmit}
+            Validate
+            style={{ width: "400px", height: "300px" }} autocomplete="off"
+          >
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>{t("header.username")}</Form.Label>
-              <Form.Control className="bg-success shadow rounded" style={{width:"300px"}} type="text" name="username" placeholder={t("header.usernameplace")} />
+              <Form.Label className={`text-${theming.typography.color}`}>{t("header.mail")}</Form.Label>
+              <Form.Control
+                className="bg-secondary shadow rounded zoom"
+                style={{ width: "300px" }}
+                type="email"
+                name="email"
+                placeholder={t("header.mailplace")}
+              />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>{t("header.password")}</Form.Label>
-              <Form.Control className="bg-success shadow rounded"  style={{width:"300px"}} type="password" name="password" placeholder={t("header.passwordplace")}/>
+              <Form.Label className={`text-${theming.typography.color}`}>{t("header.password")}</Form.Label>
+              <Form.Control
+                className="bg-secondary shadow rounded zoom"
+                style={{ width: "300px" }}
+                type="password"
+                name="password"
+                placeholder={t("header.passwordplace")}
+              />
             </Form.Group>
-            <Button variant="success" type="submit">{t("header.enter")}</Button>
+            <Button type="submit" title={<BiLogIn />}>
+              {t("header.enter")}
+            </Button>
           </Form>
-            
-
-        </Container>
-  
-
-
-
-        
+        </Modal.Body>
+        <Modal.Footer>
+          <Modal.Title className="text-small">{t("header.succesfull")}</Modal.Title>
+        </Modal.Footer>
       </Modal>
     </React.Fragment>
   );
 }
-  
-  export default ModalLog;
+
+export default ModalLog;

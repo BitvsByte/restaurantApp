@@ -15,7 +15,8 @@ function LandingPage() {
 
             <Headerapp></Headerapp>
             <MainApp></MainApp>
-            <Footer></Footer>
+            <Footer />
+            
 
 
         </React.Fragment>

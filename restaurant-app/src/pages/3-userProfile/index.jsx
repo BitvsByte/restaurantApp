@@ -74,12 +74,12 @@ function Perfil() {
               />
               <Card.Header>
                 <Card.Title className={`mb-1 text-${theming.reservas.color}`}>
-                  Bienvenido a su perfil de usuario
+                {t("main.bienvenidoperfil")}
                 </Card.Title>
               </Card.Header>
               <Card.Body>
                 <Form
-                  Validate
+                  noValidate
                   className="contenedor"
                   onSubmit={handleDelete}
                   autocomplete="off"

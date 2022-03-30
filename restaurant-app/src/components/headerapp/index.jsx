@@ -13,11 +13,12 @@ import { useTranslation } from "react-i18next";
 import logo2 from './../../assets/img/logo2.jpeg'
 import ModalReg from "../modalRegister";
 import ModalLog from "../modalLogin";
-import {FaRegUserCircle} from 'react-icons/fa'
+import {AiOutlineLogout} from 'react-icons/ai'
 import { Link } from "react-router-dom";
 import { Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+
 
 
 
@@ -42,6 +43,11 @@ function Headerapp() {
         <Navbar.Brand>
           <img alt="" src={logo2} width="250" height="80" />
         </Navbar.Brand>
+        <Nav className="me-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
         <Navbar.Toggle />
         <Navbar.Collapse className="d-flex justify-content-end">
 <Row>
@@ -58,14 +64,17 @@ function Headerapp() {
           <Container>
           <ModalReg />
           <ModalLog /> 
-          <Button variant="success" type="submit" onClick={handleDelete}></Button>
+          <Button className={`text-${theming.typography.color}`}
+         
+         style={{ width: "40px",height:"38px" }} type="submit" border={`${theming.secondary.color}`} onClick={handleDelete}>{<AiOutlineLogout />} </Button>
+         <Headertra />
 
           </Container>
-          <Container>
+          {/* <Container>
           <Headertra />
           
 
-          </Container>
+          </Container> */}
 
 
   </Col>

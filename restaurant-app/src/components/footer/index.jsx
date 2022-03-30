@@ -4,6 +4,7 @@ import ThemingSelector from '../themimg-selector';
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
 import { ThemingContext } from "../themimg-selector/theming.context";
+import { Link } from 'react-router-dom';
 
 
 function Footer() {
@@ -11,6 +12,7 @@ function Footer() {
   // {t("footer.footer-subtitules")}
 
   const [theming, changecolor] = useContext(ThemingContext);
+  
   return (
     <React.Fragment>
       <div className="footer__container">
@@ -31,42 +33,42 @@ function Footer() {
                 <h5 className={`mb-3 text-${theming.typography.color}`}>{t("footer.alumnos")}</h5>
                 <ul className="list-unstyled text-muted">
                   <li>
-                    <a className={`references text-${theming.typography.color}`} href="https://github.com/Macaeco">Macarena Fernanadez</a>
+                    <a className={` references small mb-0 text-${theming.typography.color}`} href="https://github.com/Macaeco">Macarena F</a>{' '}
+                    <a className={`references small mb-0 text-${theming.typography.color}`} href="https://github.com/jkoki91">Jorge L</a>
                   </li>
                   <li>
-                    <a className={`references text-${theming.typography.color}`} href="https://github.com/jkoki91">Jorge Lleonard</a>
+                  <a className={`references small mb-0 text-${theming.typography.color}`} href="https://github.com/Robinbucad">Robin B.</a>{' '}
+                  <a className={`references small mb-0 text-${theming.typography.color}`} href="https://github.com/ccrolo">Cristina R.</a>
                   </li>
                   <li>
-                  <a className={`references text-${theming.typography.color}`} href="https://github.com/Robinbucad">Robin Bucad</a>
+                  <a className={`references small mb-0 text-${theming.typography.color}`} href="https://github.com/Albahd">Alba H.</a>{' '}
+                  <a className={`references small mb-0 text-${theming.typography.color}`} href="https://github.com/hectortrubia">Hector A.</a>
                   </li>
                   <li>
-                  <a className={`references text-${theming.typography.color}`} href="https://github.com/ccrolo">Cristina Romero</a>
+                    <a  className={`references text-${theming.typography.color}`} href="https://github.com/ann-jrti">Andrea M.</a>{' '}
+                    <a  className={`references text-${theming.typography.color}`} href="https://github.com/Stejadas">Sergio T.</a>
                   </li>
                   <li>
-                  <a className={`references text-${theming.typography.color}`} href="https://github.com/Albahd">Alba Huertas</a>
+                    <a  className={`references text-${theming.typography.color}`} href="https://github.com/ivsp">Ivan S.</a>{' '}
+                    <a  className={`references text-${theming.typography.color}`}href="https://github.com/Korobajr">J.R Coroba</a>
                   </li>
                   <li>
-                  <a className={`references text-${theming.typography.color}`} href="https://github.com/hectortrubia">Hector Alvarez</a>
-                  </li>
+                  <a  className={`references text-${theming.typography.color}`}href="">Senay</a>
+                    </li>
+
                 </ul>
               </div>
               <div className="col-lg-2 col-md-6">
                 <h5 className={`mb-3 text-${theming.typography.color}`}>{t("footer.alumnos")}</h5>
                 <ul className="list-unstyled text-muted">
                   <li>
-                    <a  className={`references text-${theming.typography.color}`} href="https://github.com/ann-jrti">Andrea Masó</a>
+                  <Link to="/terms">Terminos y Condiciones</Link>
                   </li>
                   <li>
-                    <a  className={`references text-${theming.typography.color}`} href="https://github.com/Stejadas">Sergio Tejada</a>
+                  <Link to="/cookies">Politica de Cookies</Link>
                   </li>
                   <li>
-                    <a  className={`references text-${theming.typography.color}`} href="https://github.com/ivsp">Ivan Sanchez</a>
-                  </li>
-                  <li>
-                    <a  className={`references text-${theming.typography.color}`}href="https://github.com/Korobajr">Juan Ramon Coroba</a>
-                  </li>
-                  <li>
-                    <a  className={`references text-${theming.typography.color}`} href="https://github.com/dedeere400 ">Senay</a>
+                    <Link to="/privacity">Politica de Privacidad</Link>
                   </li>
                 </ul>
               </div>
@@ -75,24 +77,7 @@ function Footer() {
                 <p className={`small text-${theming.typography.color}`}>
                 {t("footer.congdos")}
                 </p>
-                <form action="#">
-                  <div className="input-group mb-3">
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="Recipient's username"
-                      aria-label="Recipient's username"
-                      aria-describedby="button-addon2"
-                    ></input>
-                    <button
-                      className="btn btn-secondary"
-                      id="button-addon2"
-                      type="button"
-                    >
-                      <i className="fas fa-paper-plane"></i>
-                    </button>
-                  </div>
-                </form>
+
               </div>
             </div>
           </div>

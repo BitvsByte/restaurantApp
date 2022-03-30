@@ -22,7 +22,7 @@ export default function Headertra() {
     return (
       <React.Fragment>
         <InputGroup>
-          <DropdownButton className="btn_translate" variant={`${theming.secondary.color}`} title={<BsTranslate />} id="input-group-dropdown-1">
+          <DropdownButton className="btn_translate" border={`${theming.secondary.color}`} title={<BsTranslate />} id="input-group-dropdown-1">
             <Dropdown.Item className="text-info fw-bold" onClick={() => i18n.changeLanguage("es")} href="#">Es<img className='mx-2' src={espana} style={{width:'20px'}}></img></Dropdown.Item>
             <Dropdown.Item className="text-info fw-bolder" onClick={() => i18n.changeLanguage("en")} href="#">En<img className='mx-2'src={uk} style={{width:'20px'}}></img></Dropdown.Item>
           </DropdownButton>

@@ -12,6 +12,7 @@ import './style.scss'
 import {useContext} from 'react'
 import {ThemingContext} from "./../themimg-selector/theming.context";
 import { useNavigate } from 'react-router-dom';
+import {AiOutlineForm} from 'react-icons/ai'
 
 
 
@@ -56,8 +57,8 @@ function ModalReg() {
 
   return (
     <React.Fragment>
-      <Button  variant={`${theming.secondary.color}`} className={`text-${theming.typography.color}`} style={{width:"70px"}} onClick={handleShow}>
-        {t("header.boton")}
+      <Button  border={`${theming.secondary.color}`} className={`text-${theming.typography.color}`} style={{width:"40px"}} onClick={handleShow}>
+        {<AiOutlineForm />}
       </Button>
 
 

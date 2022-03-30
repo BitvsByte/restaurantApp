@@ -11,6 +11,9 @@ export const lightTheme = {
     },
     reservas:{
         color:'danger'
+    },
+    comanda:{
+        color:'secondary'
     }
 }
 
@@ -25,6 +28,9 @@ export const darkTheme = {
         color: 'warning'
     },
     reservas:{
+        color:'warning'
+    },
+    comanda:{
         color:'warning'
     }
 }

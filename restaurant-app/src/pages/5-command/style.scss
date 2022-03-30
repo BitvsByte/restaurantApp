@@ -9,7 +9,7 @@
 }
 
 .command_conatiner{
-  background-image: url('../../assets/img/tamara-schipchinskaya-NgLO-4P2uok-unsplash.jpg');
+  background-image: url('../../assets/img/Carta-restaurante-premium-SINTONIA_03.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 100%;
@@ -26,6 +26,7 @@
 
 .zoom {
   transition: transform 0.2s;
+  border-radius: 5px;
 }
 
 .zoom:hover {
@@ -35,4 +36,8 @@
   padding-top: 3px;
   
 
+}
+.id__btn{
+  font-size: 2px;
+  color:white;
 }

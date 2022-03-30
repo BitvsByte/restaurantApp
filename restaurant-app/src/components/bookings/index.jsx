@@ -27,11 +27,12 @@ function BookingCalendar() {
   const navigate = useNavigate()
   const [t, i18n] = useTranslation("global");
   const [theming, changecolor] = useContext(ThemingContext);
+  
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     const BookingCalendar = {
       date: e.target.date.value,
       time: e.target.time.value,
@@ -61,6 +62,19 @@ function BookingCalendar() {
       
   };
 
+  const handleDelete = () => {
+    fetch("http://localhost:4000/booking", {
+      method: "DELETE",
+      headers: { Authorization: `Bearer ${bookingToken}` },
+    })
+      .then((j) => j.json())
+      .then((data) => {
+        console.log(data);
+      });
+
+
+  };
+
 
 
 
@@ -88,7 +102,7 @@ function BookingCalendar() {
  
     
 
-    <Form Validate className="contenedor" onSubmit={handleSubmit} autocomplete="off">
+    <Form noValidate className="contenedor" onSubmit={handleSubmit} autocomplete="off">
               <Form.Group className={`mb-1 text-${theming.reservas.color}`} controlId="exampleForm.ControlInput1">
                 <Form.Label id="label">{t("main.date")}</Form.Label>
               </Form.Group>
@@ -116,7 +130,9 @@ function BookingCalendar() {
               </Form.Group>
               
               <Button type="submit">{<IoIosSend></IoIosSend>}</Button>
+              
             </Form>
+            <Button onClick={handleDelete} type="submit">borrar</Button>
 
   </Card.Body>
 </Card>

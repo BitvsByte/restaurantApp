@@ -66,12 +66,12 @@ function ModalLog() {
     <React.Fragment>
       <Button
       className={`text-${theming.typography.color}`}
-      variant={`${theming.secondary.color}`}
+      border={`${theming.secondary.color}`}
          
-        style={{ width: "70px" }}
+        style={{ width: "40px" }}
         onClick={handleShow}
       >
-        {t("header.boton1")}
+        {<BiLogIn />}
       </Button>
 
       <Modal show={show} onHide={handleClose} animation={true} className="modal_container">
@@ -103,7 +103,7 @@ function ModalLog() {
                 placeholder={t("header.passwordplace")}
               />
             </Form.Group>
-            <Button type="submit" title={<BiLogIn />}>
+            <Button type="submit">
               {t("header.enter")}
             </Button>
           </Form>

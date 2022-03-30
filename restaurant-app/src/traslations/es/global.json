@@ -39,7 +39,9 @@
         "starter":"Entrantes",
         "maindish":"Platos Principales",
         "secondcourse":"Segundos Platos",
-        "wine":"Vino"
+        "wine":"Vino",
+        "soft":"Refrescos",
+        "bienvenidoperfil":"Bienvenido a su perfil de usuario"
     },
     "footer":{
         "hello-world":"Hello World",

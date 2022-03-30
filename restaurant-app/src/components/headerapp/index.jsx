@@ -44,9 +44,9 @@ function Headerapp() {
           <img alt="" src={logo2} width="250" height="80" />
         </Navbar.Brand>
         <Nav className="me-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="#home">Reservas</Nav.Link>
+      <Nav.Link href="#features">Menu</Nav.Link>
+      <Nav.Link href="#pricing"></Nav.Link>
     </Nav>
         <Navbar.Toggle />
         <Navbar.Collapse className="d-flex justify-content-end">
